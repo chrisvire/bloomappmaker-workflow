@@ -1,0 +1,3 @@
+# m h dom mon dow user	command
+* * * * * root /data/yii cron/check-builds  2>&1 >> /var/log/checkbuilds.log
+

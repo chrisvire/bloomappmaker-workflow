@@ -46,6 +46,7 @@ cron:
     env_file:
         - ./common.env
         - ./local.env
+    command: /data/run-cron.sh
 composer:
     image: silintl/php-cli:latest
     container_name: composer
