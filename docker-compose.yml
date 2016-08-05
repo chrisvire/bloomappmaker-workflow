@@ -2,7 +2,7 @@ data:
     image: silintl/data-volume:latest
     container_name: data
     volumes:
-        - /data:/data
+        - ./application:/data
 db:
     image: silintl/mariadb:latest
     container_name: db
