@@ -10,9 +10,9 @@ db:
         - "3306"
     environment:
         MYSQL_ROOT_PASSWORD: r00tp@ss!
-        MYSQL_DATABASE: appbuilder
-        MYSQL_USER: appbuilder
-        MYSQL_PASSWORD: appbuilder
+        MYSQL_DATABASE: bloomworkflow
+        MYSQL_USER: bloomworkflow
+        MYSQL_PASSWORD: bloomworkflow
 testDb:
     image: silintl/mariadb:latest
     container_name: testDb
@@ -21,8 +21,8 @@ testDb:
     environment:
         MYSQL_ROOT_PASSWORD: r00tp@ss!
         MYSQL_DATABASE: test
-        MYSQL_USER: appbuilder
-        MYSQL_PASSWORD: appbuilder
+        MYSQL_USER: bloomworkflow
+        MYSQL_PASSWORD: bloomworkflow
 web:
     build: .
     container_name: web
