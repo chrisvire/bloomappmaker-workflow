@@ -30,7 +30,26 @@ return [
             'enableCookieValidation' => true,
             'enableCsrfValidation' => true,
             'cookieValidationKey' => $FRONT_COOKIE_KEY,
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser'
+            ]
         ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => false,
+            'showScriptName' => false,
+            'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'workflow',
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        //'POST' => 'new-workflow',
+                        'GET <id>' => 'view-workflow',
+                    ]
+                ],
+            ],
+        ]
     ],
     'params' => [],
 ];

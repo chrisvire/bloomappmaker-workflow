@@ -4,7 +4,7 @@ TABLES=(workflow)
 SUFFIX="Base"
 
 declare -A models
-models["workflw"]="WorkflowBase"
+models["workflow"]="WorkflowBase"
 
 for i in "${!models[@]}"; do
     CMD="./yii gii/model --tableName=$i --modelClass=${models[$i]} --enableI18N=1 --overwrite=1 --interactive=0 --ns=\common\models"
